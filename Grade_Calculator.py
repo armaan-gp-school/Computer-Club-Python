@@ -44,6 +44,11 @@ take_classwork("homework assignment", 100.0)
 print(classworks)
 print(list(classworks.values()))
 
+classwork_average = sum(list(classworks.values()))/len(list(classworks.values()))
+quiz_average = sum(list(quizzes.values()))/len(list(quizzes.values()))
+test_average = sum(list(tests.values()))/len(list(tests.values()))
 
 if len(classworks) > 0 and len(quizzes) > 0 and len(tests) > 0:
-    (sum(list(classworks.values()))/len(list(classworks.values())) * 0.25) + (sum(list(classworks.values()))/len(list(classworks.values())) * 0.35)
+    grade_average = (classwork_average * 0.25) + (quiz_average * 0.35) + (test_average * 0.40)
+elif len(classworks) > 0 and len(quizzes) > 0 and len(tests) == 0:
+    grade_average = (classwork_average * 0.)
