@@ -5,4 +5,4 @@ if david_mean == "T":
 elif david_mean == "F":
     print("David isn't mean !!")
 else:
-    print("You didnt type T or F dumbahh jit")
+    print("You didnt type T or F")
